@@ -1,0 +1,46 @@
+@use '../base/mixins' as mixins
+
+.footer
+  background-color: var(--color-primary)
+  padding: 32px 0
+
+.footer-container
+  display: flex
+  justify-content: center
+  text-align: center
+  font-family: var(--font-medium)
+  color: var(--color-primary)
+
+.footer__content
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.footer__logotipo
+  display: inline-block
+  margin: 0
+  width: 85px
+  height: 42px
+  font-size: 0
+
+.footer__logotipo-img
+  @include mixins.imgfull
+
+.footer__copyright
+  font-family: var(--font-primary-regular)
+  color: var(--color-secondary)
+  font-size: 14px
+  line-height: 16px
+  letter-spacing: 0
+
+@include mixins.media(md)
+  .footer__content
+    display: block
+    text-align: center
+
+  .footer__copyright
+    margin-top: 24px
+    padding-top: 24px
+    border-top: 1px solid var(--color-triodecenary)
+    font-size: 12px
+    line-height: 20px

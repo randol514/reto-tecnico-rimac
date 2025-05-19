@@ -1,0 +1,64 @@
+@use '../base/mixins' as mixins
+
+body
+  background-color: var(--color-secondary)
+
+.header
+  padding: 14px 0
+  background-color: var(--color-secondary)
+
+.header__content
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.header__logotipo
+  margin: 0
+  width: 73px
+  height: 36px
+  font-size: 0
+
+.header__logotipo-img
+  @include mixins.imgfull
+
+.header__details
+  display: flex
+  align-items: center
+  gap: 25px
+
+.header__details-text
+  font-family: var(--font-primary-semibold)
+  color: var(--color-primary)
+  font-size: 12px
+  line-height: 16px
+  letter-spacing: 0.2px
+
+.header__details-phone
+  font-family: var(--font-primary-bold)
+  color: var(--color-primary)
+  font-size: 18px
+  line-height: 20px
+  letter-spacing: 0.4px
+  &::before
+    content: "\e907"
+    font-family: "icomoon"
+    margin-right: 10px
+    display: inline-block
+    vertical-align: middle
+
+@include mixins.media(md)
+  .header
+    padding: 12px 0
+
+  .header__logotipo
+    width: 65px
+    height: 32px
+
+  .header__details-text
+    display: none
+
+  .header__details-phone
+    font-size: 16px
+
+  .header__details-phone::before
+    margin-right: 7px

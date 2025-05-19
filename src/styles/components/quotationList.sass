@@ -1,0 +1,11 @@
+@use '../base/mixins' as mixins
+
+.quotation__list
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 32px
+
+@include mixins.media(md)
+  .quotation__list
+    grid-template-columns: repeat(1, 1fr)
+    gap: 24px

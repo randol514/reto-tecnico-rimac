@@ -1,0 +1,76 @@
+@use '../base/_mixins' as mixins
+
+.quotation__card
+  position: relative
+  input[type="radio"]:checked +
+    .quotation__card-content
+      border: 3px solid var(--color-primary)
+      .quotation__card-check
+        background-color: var(--color-novenary)
+        &::before
+          @include mixins.show
+
+.quotation__card-radio
+  position: absolute
+  top: 0
+  left: 0
+  @include mixins.hide
+
+.quotation__card-content
+  background-color: var(--color-white)
+  border-radius: 24px
+  box-shadow: 0px 2px 32px 0px rgba(174,172,243,0.35)
+  padding: 16px 24px 40px 24px
+  box-sizing: border-box
+  display: block
+  transition: var(--transition)
+  border: 3px solid var(--color-white)
+
+.quotation__card-check
+  display: flex
+  justify-self: flex-end
+  align-items: center
+  justify-content: center
+  width: 24px
+  height: 24px
+  border-radius: 100%
+  border: 1px solid var(--color-octonary)
+  transition: var(--transition)
+  font-size: 13px
+  &::before
+    content: "\e900"
+    font-family: 'icomoon'
+    transition: var(--transition)
+    @include mixins.hide
+    color: var(--color-white)
+
+.quotation__card-icon
+  width: 48px
+  height: 48px
+  margin: 0
+  font-size: 0
+
+.quotation__card-title
+  margin-top: 8px
+
+.quotation__card-title-text
+  font-family: var(--font-secondary-black)
+  color: var(--color-quinary)
+  font-size: 20px
+  line-height: 28px
+  letter-spacing: -0.2px
+  margin: 0
+
+.quotation__card-text
+  font-family: var(--font-secondary-regular)
+  color: var(--color-quinary)
+  font-size: 12px
+  line-height: 20px
+  letter-spacing: 0.2px
+  margin-top: 8px
+
+@include mixins.media(md)
+  .quotation__card-icon-title
+    display: flex
+    align-items: center
+    gap: 8px

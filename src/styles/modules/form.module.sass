@@ -1,0 +1,66 @@
+@use '../base/mixins' as mixin
+
+.form
+  width: 100%
+  margin: 0
+  padding: 0
+
+.form-rows
+  @include mixin.listnone
+
+.form-row
+  display: grid
+  gap: 20px
+  margin-bottom: 16px
+  &:last-child
+    margin-bottom: 0
+
+//columns
+.row-one
+  @include mixin.grid-columns(1)
+
+.row-two
+  @include mixin.grid-columns(2)
+
+.row-two-inline
+  gap: 0
+  display: grid
+  grid-template-columns: 140px 1fr
+
+.row-three
+  @include mixin.grid-columns(3)
+
+@include mixin.media(lg)
+  .row-three
+    @include mixin.grid-columns(2)
+
+@include mixin.media(md)
+  .row-two
+    @include mixin.grid-columns(1)
+  .row-three
+    @include mixin.grid-columns(1)
+
+//elements
+.form-checkboxs
+  margin-top: 20px
+
+.form-checkbox
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
+
+.form-button
+  margin-top: 15px
+
+.form-terms
+  font-family: var(--font-primary-semibold)
+  color: var(--color-primary)
+  font-size: 12px
+  line-height: 20px
+  letter-spacing: 0.1px
+  text-decoration: underline
+  margin-top: 15px
+
+@include mixin.media(md)
+  .form-button
+    margin-top: 30px

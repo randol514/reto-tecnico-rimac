@@ -1,0 +1,47 @@
+@use '../../../styles/base/_mixins' as mixins
+
+.button
+  border-radius: 0
+  background: none
+  border: none
+  padding: 0
+  margin: 0
+  appearance: none
+  position: relative
+  z-index: 3
+  display: inline-block
+  height: 48px
+  line-height: 48px
+  padding: 0 30px
+  box-sizing: border-box
+  font-size: 18px
+  text-align: center
+  cursor: pointer
+
+.primary
+  background-color: var(--color-primary)
+  color: var(--color-white)
+  font-family: var(--font-primary-bold)
+  border-radius: 40px
+  height: 64px
+  font-size: 20px
+  line-height: 64px
+  max-width: 195px
+  width: 100%
+
+.secondary
+  border: 1px solid var(--color-secondary)
+  background-color: var(--color-quaternary)
+  color: var(--color-white)
+  font-family: var(--font-secondary-bold)
+  border-radius: 32px
+  max-width: 224px
+  width: 100%
+
+.loading
+  opacity: 0.2
+
+@include mixins.media(md)
+  .primary
+    max-width: 100%
+    font-size: 18px

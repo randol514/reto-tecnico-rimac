@@ -1,0 +1,15 @@
+@use './mixins'
+
+// container
+.main-wrapper-container
+  width: 100%
+  margin: 0 auto
+  position: relative
+  padding: 0
+  box-sizing: border-box
+  max-width: 1260px
+  padding: 0 30px
+
+@include mixins.media(lg)
+  .main-wrapper-container
+    padding: 0 24px

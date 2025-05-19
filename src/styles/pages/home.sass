@@ -1,0 +1,142 @@
+@use '../base/mixins' as mixins
+
+.home
+  position: relative
+  padding-top: 32px
+  padding-bottom: 100px
+  overflow: hidden
+  &::before
+    content: ''
+    height: 1088px
+    width: 432px
+    background-image: url('../assets/images/backgrounds/blur-asset1.png')
+    background-position: 0 0
+    background-repeat: no-repeat
+    background-size: 100%
+    position: absolute
+    top: 0
+    left: 0
+    pointer-events: none
+  &::after
+    content: ''
+    height: 1088px
+    width: 432px
+    background-image: url('../assets/images/backgrounds/blur-asset2.png')
+    background-position: 0 0
+    background-repeat: no-repeat
+    background-size: 100%
+    position: absolute
+    top: 0
+    right: 0
+    pointer-events: none
+
+.home__content
+  display: flex
+  gap: 150px
+
+.home__content-image
+  width: 480px
+  margin: 0
+
+.home__content-image-img
+  height: 560px
+  object-fit: cover
+  width: 100%
+  border-radius: 20px
+
+.home__content-form
+  width: 351px
+
+.home__content-form-subtitle
+  font-family: var(--font-primary-bold)
+  color: var(--color-primary)
+  font-size: 12px
+  line-height: 16px
+  letter-spacing: 0.4px
+  background: linear-gradient(90deg,rgba(0, 244, 226, 1) 0%, rgba(0, 255, 127, 1) 100%)
+  display: inline-block
+  border-radius: 4px
+  padding: 4px 8px
+
+.home__content-form-title-text
+  font-family: var(--font-primary-bold)
+  color: var(--color-primary)
+  font-size: 32px
+  line-height: 40px
+  letter-spacing: 0
+  margin: 0
+  margin-top: 16px
+
+.home__content-form-text
+  font-family: var(--font-primary-semibold)
+  color: var(--color-primary)
+  font-size: 14px
+  line-height: 20px
+  letter-spacing: 0.2px
+  margin-top: 8px
+
+.home__content-form-form
+  margin-top: 25px
+
+.home__content-form-image
+  display: none
+  width: 136px
+  margin: 0
+
+.home__content-form-img
+  width: 136px
+  height: 160px
+  object-fit: cover
+
+@include mixins.media(lg)
+  .home__content
+    gap: 50px
+
+@include mixins.media(md)
+  .home
+    padding-top: 10px
+    padding-bottom: 80px
+    overflow: inherit
+
+  .home__content
+    flex-wrap: wrap
+
+  .home__content-form
+    width: 100%
+
+  .home__content-image
+    display: none
+
+  .home::after
+    width: 301.02px
+    height: 282.11px
+    top: -56px
+    right: 0
+    background-image: url('../assets/images/backgrounds/blur-asset2-mobile.png')
+
+  .home::before
+    width: 238px
+    height: 304px
+    bottom: 0
+    top: initial
+    right: 0
+    background-image: url('../assets/images/backgrounds/blur-asset1-mobile.png')
+
+  .home__content-form-top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 12px
+    padding-bottom: 20px
+    border-bottom: 1px solid var(--color-tetradecenary)
+
+  .home__content-form-title-text
+    font-size: 28px
+    line-height: 36px
+    letter-spacing: 0%
+
+  .home__content-form-text
+    margin-top: 24px
+
+  .home__content-form-image
+    display: block
