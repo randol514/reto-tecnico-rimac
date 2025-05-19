@@ -23,7 +23,7 @@ const PlanList = ({ userAge, quotationSelected  }) =>{
     if (quotationSelected === "Para alguien más") {
       return {
         ...plan,
-        price: (plan.price * 0.95).toFixed(2), 
+        price: plan.price * 0.95, 
       }
     }
     return plan

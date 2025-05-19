@@ -3,7 +3,7 @@ const Loading = () => {
   const loadingClass = `${styles.loading} `;
   return (
     <div className={loadingClass}>
-      <span>Cargando.....</span>
+      <span>.....</span>
     </div>
   )
 }

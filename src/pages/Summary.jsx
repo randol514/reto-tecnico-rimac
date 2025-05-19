@@ -20,10 +20,8 @@ const Summary = () =>{
   if (error) return <div>Error: {error.message}</div>
 
   const fullName = `${data.name} ${data.lastName}`
-  const formattedPrice = 
-  selectPlan && typeof selectPlan.price === "number"
-    ? `$${selectPlan.price.toFixed(2)}`
-    : "No disponible";
+  const price = parseFloat(selectPlan?.price)
+  const formattedPrice = isNaN(price) ? "Precio no disponible" : `$${price.toFixed(2)}`
 
   return(
     <div className="summary">

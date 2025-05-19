@@ -54,9 +54,9 @@ const FormHome = () =>{
               className="left-inline"
               options={[
                 { label: "Doc.", value: "" },
-                { label: "DNI", value: "dni" },
-                { label: "RUC", value: "ruc" },
-                { label: "Pasaporte", value: "pasaporte" },
+                { label: "DNI", value: "DNI" },
+                { label: "RUC", value: "RUC" },
+                { label: "Pasaporte", value: "Pasaporte" },
               ]}
             />
             <FormField
